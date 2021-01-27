@@ -60,6 +60,7 @@ if (auth.status == AuthorizationStatus.Accepted) {
   say("Transaction stopped")
   statusNotification(status = ChargePointStatus.Available())
 
+  sleep(5.seconds)
 } else {
   say("Authorization denied by Central System")
   fail("Not authorized")

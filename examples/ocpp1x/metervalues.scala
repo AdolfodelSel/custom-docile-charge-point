@@ -29,3 +29,5 @@ send(
     )
   )
 )
+
+sleep(5.seconds)

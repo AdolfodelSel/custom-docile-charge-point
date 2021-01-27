@@ -52,6 +52,8 @@ if (auth.status == AuthorizationStatus.Accepted) {
     scope = connectorScope,
     timestamp = Some(stopTransactionTimestamp)
   )
+
+  sleep(5.seconds)
 } else {
   fail("Not authorized")
 }

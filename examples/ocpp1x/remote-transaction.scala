@@ -34,7 +34,7 @@ if (auth.status == AuthorizationStatus.Accepted) {
 
   waitForValidRemoteStop()
   // handle UnlockConnectorReq if present
-  Try(expectIncoming(unlockConnectorReq.respondingWith(UnlockConnectorRes(UnlockStatus.NotSupported))))
+  //Try(expectIncoming(unlockConnectorReq.respondingWith(UnlockConnectorRes(UnlockStatus.NotSupported))))
   
   statusNotification(status = ChargePointStatus.Occupied(Some(OccupancyKind.Finishing)))
   stopTransaction(transactionId = transId, idTag = Some(chargeTokenId))
@@ -42,6 +42,8 @@ if (auth.status == AuthorizationStatus.Accepted) {
 
   say("Transaction stopped")
 
+  sleep(5.seconds)
+  
 } else {
   say("Authorization denied by Central System")
   fail("Not authorized")
