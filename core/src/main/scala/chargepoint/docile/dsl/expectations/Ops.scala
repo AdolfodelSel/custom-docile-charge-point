@@ -174,6 +174,7 @@ trait Ops[
   def cancelReservationReq = requestMatching { case r: CancelReservationReq => r }
   def unlockConnectorReq = requestMatching { case r: UnlockConnectorReq => r }
   def setChargingProfileReq = requestMatching { case r: SetChargingProfileReq => r }
+  def chargePointDataTransferReq = requestMatching { case r: ChargePointDataTransferReq => r }
   def clearChargingProfileReq = requestMatching { case r: ClearChargingProfileReq => r }
   def getCompositeScheduleReq = requestMatching { case r: GetCompositeScheduleReq => r }
 
